@@ -18,12 +18,7 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding=DataBindingUtil.setContentView(this, R.layout.activity_main)
         mainActivityViewModel=ViewModelProvider(this).get(MainActivityViewModel::class.java)
         activityMainBinding.model= mainActivityViewModel
-        if (savedInstanceState == null) {
-            mainActivityViewModel.init()
-        }
         setupButtonClick()
-
-
     }
 
     private fun setupButtonClick() {

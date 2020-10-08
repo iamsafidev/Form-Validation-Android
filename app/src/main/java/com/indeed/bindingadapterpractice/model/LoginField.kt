@@ -11,16 +11,17 @@ class LoginField: BaseObservable() {
     private var password: String? = null
     var emailError = ObservableField<Int?>()
     var passwordError = ObservableField<Int?>()
+
     @Bindable
     fun getEmail(): String? {
         return email
     }
 
-
     fun setEmail(email: String?) {
         this.email = email
         notifyPropertyChanged(BR.valid)
     }
+
     @Bindable
     fun getPassword(): String? {
         return password

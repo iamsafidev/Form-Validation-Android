@@ -12,7 +12,11 @@ class MainActivityViewModel : ViewModel() {
     private var onFocusEmail: OnFocusChangeListener? = null
     private var onFocusPassword: OnFocusChangeListener? = null
     private val buttonClick: MutableLiveData<LoginField> = MutableLiveData<LoginField>()
-    fun init() {
+    /*fun init() {
+
+    }*/
+
+    init {
         login = LoginField()
         onFocusEmail = OnFocusChangeListener { view, focused ->
             val et = view as EditText
